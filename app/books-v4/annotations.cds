@@ -41,9 +41,41 @@ annotate service.Books with @(
         },
         {
             $Type : 'UI.DataField',
+            Value : Subtitle,
+        },
+        {
+            $Type : 'UI.DataField',
             Label : 'stock',
             Value : stock,
         },
+        {
+            $Type : 'UI.DataField',
+            Value : price,
+            Label : 'price',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : currency_code,
+            Label : 'currency_code',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : author,
+            Label : 'author',
+        },
+    ],
+    UI.SelectionFields : [
+        ID,
+        title,
+        Subtitle,
     ],
 );
+
+annotate service.Books with {
+    ID @Common.Label : 'ID'
+};
+
+annotate service.Books with {
+    Subtitle @Common.Label : 'Subtitle'
+};
 
